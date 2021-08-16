@@ -65,7 +65,6 @@ function create() {
 				ls.setItem('ASTOTAL', ls.getItem('ASTOTAL') + '?' + name + '?null');
 				window.open(location.href + '?' + name);
 				location.reload();
-				alert('Project created!');
 			} else {
 				alert('Name reserved!');
 			}
@@ -154,9 +153,8 @@ function newlist() {
 		if ( ls.getItem(state + name) === null || ls.getItem(state + name) === '' ) {
 			if ( true ) {
 				ls.setItem(state + name, '');
-				ls.setItem(state, 'null!' + name + '!null!' + ls.getItem(state));
+				ls.setItem(state, ls.getItem(state) + 'null!' + name + '!null!');
 				render();
-				alert('List created!');
 			}
 		} else {
 			alert('List with same name already exists!');
