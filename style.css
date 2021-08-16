@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+
+:root
+{
+	--hf: 'Fredoka One', cursive;
+	--pf: 'Montserrat', sans-serif;
+	--fs: 24px;
+	--bg: #0A1427;
+	--dc: #B6ACE8;
+	--ec: #5A53B1;
+	--hc: #7D92C9;
+}
+
+::selection {
+	color: #ffffff;
+}
+
+* {
+	background: var(--bg);
+	color: var(--dc);
+	cursor: default;
+	transition: 0.15s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	margin: 0;
+	padding: 0;
+	font-family: var(--hf);
+	color: var(--hc);
+}
+
+p,
+em,
+strong
+{
+	margin: 0;
+	padding: 0;
+	font-family: var(--pf);
+	font-size: var(--fs);
+	color: var(--dc);
+}
+
+h1 {
+	font-size: calc(var(--fs) * 6);
+}
+
+h2 {
+	font-size: calc(var(--fs) * 2);
+}
+
+#coll {
+	display: inline-flex;
+}
+
+.list {
+	border: 5px solid var(--ec);
+	border-radius: 10px;
+	padding: 10px;
+	width: 300px;
+	overflow-x: scroll;
+	margin-right: 10px;
+}
+
+.item {
+	border: 5px solid var(--ec);
+	border-radius: 10px;
+	padding: 10px;
+	width: 270px;
+	overflow-x: scroll;
+	margin: 0;
+}
+
+button {
+	background: var(--dc);
+	color: var(--bg);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.15s;
+	font-size: calc(var(--fs)*1);
+	padding: 10px;
+	outline: none;
+	font-family: var(--hf);
+	margin-right: 10px;
+}
+
+button:hover {
+	transition: 0.15s;
+	font-size: calc(var(--fs)*1.25);
+}
+
+div {
+	margin-top: 15px;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background: var(--bg);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg);
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--hc);
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--ec);
+}
+
