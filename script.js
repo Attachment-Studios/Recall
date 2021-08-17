@@ -118,7 +118,7 @@ function render() {
 			for ( let v of ls.getItem(state + n).split('==--!--==') ) {
 				let itar = doc.getElementById(n + '-items');
 				if ( v !== '' ) {
-					itar.innerHTML = itar.innerHTML + `<p class="item" id="${state}-${n}-${v}" oncontextmenu="removeitem('${state}-${n}-${v}');">${v}</p>`;
+					itar.innerHTML = itar.innerHTML + `<p class="item" id="${state}-${n}-${v}" oncontextmenu="removeitem('${state}==--==${n}==--==${v}');">${v}</p>`;
 				}
 			}
 		}
@@ -180,9 +180,9 @@ function removelist(id) {
 }
 
 function removeitem(id) {
-	let s = id.split('-')[0];
-	let n = id.split('-')[1];
-	let v = id.split('-')[2];
+	let s = id.split('==--==')[0];
+	let n = id.split('==--==')[1];
+	let v = id.split('==--==')[2];
 	
 	ls.setItem(s+n, ls.getItem(s+n).replace(v, ''));
 	render();
