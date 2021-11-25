@@ -1,0 +1,12 @@
+{
+	"name": "Recall",
+	"description": "Recall - Project Management App",
+	"version": "1.5",
+	"manifest_version": 3,
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": { "500": "Icon.png" }
+}

@@ -86,7 +86,7 @@ function home_render() {
 	prj = doc.getElementById('all_projects');
 	for ( let n of ls.getItem('ASTOTAL').split('?') ) {
 		if ( String(n) !== 'null' ) {
-			prj.innerHTML = prj.innerHTML + `<button oncontextmenu="remove('${n}');" onclick="window.open(location.href + '?' + '${n}');">${n}</button>`
+			prj.innerHTML = prj.innerHTML + `<button oncontextmenu="remove('${n}');" onclick="location.replace(location.href + '?' + '${n}');">${n}</button>`
 		}
 	}
 }
@@ -94,6 +94,7 @@ function home_render() {
 function render() {
 	doc.title = state + ' - Recall - Project Management Tool';
 	doc.body.innerHTML = `
+		<button id="home--button" onclick="location.replace(location.href.split('?')[0]);">Home</button>
 		<div id="title">
 			<h1>${state}</h1>
 		</div>
